@@ -19,7 +19,7 @@ https://keycode.info/ was used for reference to identify key codes for the keybo
 
 
 
-## isPlaying()
+## Function isPlaying()
 
 ```js
 const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
@@ -31,3 +31,11 @@ const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
 `if (!audio)` is included to stop the function from running when keys with no associated audio are pressed. 
 `audio.currentTime` is set to 0 to allow the audio to replay without delay as the user hits the key multiple times at a fast pace, because it will rewind to the start. If it wasn't set to 0, the audio is played only when the previous session is finished. 
 
+## Function removeTransition(e)
+```js
+function removeTransition(e) {
+  if (e.propertyName !== 'transform') return
+  this.classList.remove('playing')
+}
+```
+To remove the styling on the div of the pressed key, `classList.remove` is used to remove the class name 'playing' from a given div. The check for the `transform` of the event's `propertyName` will skip the functoin if the statement is true.

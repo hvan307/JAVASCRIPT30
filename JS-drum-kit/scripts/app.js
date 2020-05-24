@@ -11,6 +11,16 @@ function main() {
     const key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
     key.classList.add('playing')
   })
+
+  function removeTransition(e) {
+    if (e.propertyName !== 'transform') return
+    this.classList.remove('playing')
+  }
+
+  const keys = document.querySelectorAll('.key')
+  keys.forEach(key => key.addEventListener('transitionend', removeTransition))
+ 
+  
 }
 
 window.addEventListener('DOMContentLoaded', main)
