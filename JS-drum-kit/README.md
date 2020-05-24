@@ -1,3 +1,8 @@
+# Overview
+This is an exercise app from Wes Bos' JavaScript30 Day 1 challenge.
+
+A music app that lets users play different sounds as they press a preassigned key on their keyboards. It's a simple DOM Object manipulation exercise using HTML5, CSS3 , vanilla JS (ES6).
+
 # index.html
 Key code is associated with every key on the keyboard that is assigned to a div and later used with the event listeners.
 https://keycode.info/ was used for reference to identify key codes for the keyboard keys.
@@ -17,9 +22,7 @@ https://keycode.info/ was used for reference to identify key codes for the keybo
 
 # app.js
 
-
-
-## Function isPlaying()
+## Function playSound()
 
 ```js
 const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
