@@ -1,9 +1,9 @@
 function main() {
-  const key = document.querySelector('.key')
+  const audio = document.querySelector('audio')
 
-  key.addEventListener('keydown', (e) => {
-    console.log(e.keycode, 'hello')
+  audio.addEventListener('keydown', (e) => {
+    console.log(e.keycode)
   })
 }
 
-document.addEventListener('DOMContentLoaded', main)
+window.addEventListener('DOMContentLoaded', main)
