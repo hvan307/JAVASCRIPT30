@@ -12,7 +12,7 @@ html {
   border-radius: 50%;
   margin: 50px auto;
   position: relative;
-  padding: 1rem;
+  padding: 2rem;
   box-shadow:  0 0 0 2px rgb(179, 179, 179);
 }
 
@@ -25,15 +25,31 @@ html {
 
 .hand {
   position: absolute;
-  border: 3px solid black;
+  border: 5px solid black;
   width: 50%;
   top: 50%;
   transform-origin: 100%; /* This allows the hand to be pivoted at its origin, rather than in the middle*/
   transform: rotate(90deg); /* This allows the starting point to be at 12 o'clock*/
   transition: all 0.05s;
-  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1); /* Adds the 'tick' effect to the movements */
+  transition-timing-function: cubic-bezier(0.1, 1.5, 0.58, 1); /* Adds the 'tick' effect to the movements */
 }
 
-/* .min-hand {
-  transform: rotate(330deg);
-} */
+.hour-hand,
+.min-hand {
+  border-color: rgb(98, 96, 96);
+}
+
+.sec-hand {
+  border: 3px solid;
+}
+
+.dot {
+  height: .6rem;
+  width: .6rem;
+  border: solid black;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
