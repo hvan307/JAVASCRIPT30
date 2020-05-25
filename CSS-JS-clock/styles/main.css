@@ -1,0 +1,39 @@
+
+html {
+  height: 100vh;
+  background: linear-gradient(rgb(6, 247, 255), rgba(247, 0, 255, 0.616));
+  text-align: center;
+}
+
+.clock {
+  width: 30rem;
+  height: 30rem;
+  border: 10px solid white;
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  padding: 1rem;
+  box-shadow:  0 0 0 2px rgb(179, 179, 179);
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px); /* account for the height of the clock hands */
+}
+
+.hand {
+  position: absolute;
+  border: 3px solid black;
+  width: 50%;
+  top: 50%;
+  transform-origin: 100%; /* This allows the hand to be pivoted at its origin, rather than in the middle*/
+  transform: rotate(90deg); /* This allows the starting point to be at 12 o'clock*/
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1); /* Adds the 'tick' effect to the movements */
+}
+
+/* .min-hand {
+  transform: rotate(330deg);
+} */
