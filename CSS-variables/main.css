@@ -1,0 +1,23 @@
+body {
+  background: linear-gradient(rgb(248, 209, 215), orange);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem auto;
+  font-size: 2rem;
+  font-weight: 100;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 1px 1px darkgray;
+  display: flex;
+  justify-content: center;
+}
+
+.controls {
+  margin-bottom: 2rem;
+}
+
+img {
+  border: 1rem solid white;
+  box-shadow: 1px 1px 1px 1px grey;
+  margin: 1rem auto;
+}
