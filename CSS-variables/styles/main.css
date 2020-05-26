@@ -1,3 +1,10 @@
+/* Higher specificity of html */
+:root {
+  --spacing: 10px;
+  --blur: 10px;
+  --base: #ffc600;
+}
+
 body {
   background: linear-gradient(rgb(248, 209, 215), orange);
   color: white;
@@ -16,8 +23,18 @@ body {
   margin-bottom: 2rem;
 }
 
+input {
+  width: 100px;
+}
+
+.hl {
+  color: var(--base)
+}
+
 img {
-  border: 1rem solid white;
-  box-shadow: 1px 1px 1px 1px grey;
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
   margin: 1rem auto;
+  width: 90%;
 }
