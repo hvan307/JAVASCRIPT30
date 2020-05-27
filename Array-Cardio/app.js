@@ -17,25 +17,50 @@ const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick
 
 // Array.prototype.filter()
 // 1. Filter the list of inventors for those who were born in the 1500's
+const fifteenHundreds = inventors.filter(inventor => inventor.year >= 1500 && inventor.year < 1600)
+// console.table(fifteenHundreds)
 
 // Array.prototype.map()
 // 2. Give us an array of the inventors first and last names
+const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`)
+// console.log(fullNames)
 
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
+const oldestToYoungest = inventors.sort((a, b) => a.year - b.year)
+// console.table(oldestToYoungest)
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live all together?
+const totalYears = inventors.reduce((acc, inventor) => acc + (inventor.passed - inventor.year), 0)
+// console.log(totalYears)
 
 // 5. Sort the inventors by years lived
+const yearsLived = inventors.sort((a, b) => (b.passed - b.year) > (a.passed - a.year) ? -1 : 1)
+// console.table(yearsLived)
 
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-
+// const category = document.querySelector('.mw-category')
+// const links = Array.from(category.querySelectorAll('a'))
+// const de = links
+//   .map(link => link.textContent)
+//   .filter(street => street.includes('de'))
 
 // 7. sort Exercise
 // Sort the people alphabetically by last name
+const sortedLastName = people.sort()
+// console.table(sortedLastName)
 
 // 8. Reduce Exercise
 // Sum up the instances of each of these
-const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ]
+const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck']
+const sum = data.reduce((accum, elem) => {
+  if (!accum[elem]) {
+    accum[elem] = 0
+  }
+  accum[elem]++
+  return accum
+}, {})
+
+console.log(sum)
