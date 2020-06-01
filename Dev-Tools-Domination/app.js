@@ -1,11 +1,14 @@
 function main() {
   const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }]
+  const p = document.querySelector('.p')
 
   function makeGreen() {
-    const p = document.querySelector('p')
     p.style.color = '#BADA55'
     p.style.fontSize = '50px'
   }
+  p.addEventListener('click', makeGreen)
+
+
 
   // Regular
 
@@ -33,4 +36,4 @@ function main() {
 
 }
 
-window.addEventListener('DOMContentLoaded', main())
+window.addEventListener('DOMContentLoaded', main)
